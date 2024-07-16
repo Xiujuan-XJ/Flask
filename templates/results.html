@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<link rel='shortcut icon' href='/assets/favicon.ico'>
+<link rel='stylesheet' href="{{url_for('static',filename='css/style.css')}}">
+<script type='text/javascript' src="{{url_for('static',filename='script/script.js')}}">
+    </script>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<h1>Final Results</h1>
+
+<body>
+
+<table border=2 class='content-table'>
+    {# this is a comment sections#}
+    {% for key,value in result.items() %}
+
+        <tr>
+            <th>{{key}}</th>
+            <th>{{value}}</th>
+        </tr>
+
+
+    {% endfor %}
+</table>
+</body>
+
+</html>
